@@ -20,7 +20,7 @@ def take_command():
     r = sr.Recognizer()
     with sr.Microphone() as source:
         print("Listening...")
-        r.pause_threshold = 10
+        r.pause_threshold = 1
         audio = r.listen(source)
     try:
         print("Recognizing...")
@@ -35,7 +35,7 @@ def take_command():
 
 if __name__ == '__main__':
 
-    speak("laddu assistance activated ")
+    speak("Philotes assistance activated ")
     speak("How can i help you")
     while True:
         query = take_command().lower()
@@ -78,7 +78,7 @@ if __name__ == '__main__':
         elif 'how are you' in query:
             speak("Iam fine")
         elif 'name' in query:
-            speak("My name is laddu")
+            speak("My name is Philotes")
         elif 'do you think about life' in query:
             speak("As a voice assistant I don't have any thoughts on this")
         elif 'is your purpose' in query:
